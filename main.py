@@ -1,9 +1,12 @@
 import os
 import discord
-from discord.ext import commands
-
+import requests
+import json
 
 client = discord.Client()
+
+def get_quote():
+  response = requests
 
 @client.event
 async def on_ready():
@@ -32,6 +35,7 @@ async def on_message(message):
 
   if message.content.startswith('$author'):
     await message.channel.send('JH1814')
+
 
 client.run(os.getenv('TOKEN'))
 
